@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			const data = [{
+					name: 'a',
+					children: [{
+							name: 'b',
+							children: [{
+								name: 'e'
+							}]
+						},
+						{
+							name: 'c',
+							children: [{
+								name: 'f'
+							}]
+						},
+						{
+							name: 'd',
+							children: [{
+								name: 'g'
+							}]
+						},
+					],
+				},
+				{
+					name: 'a2',
+					children: [{
+							name: 'b2',
+							children: [{
+								name: 'e2'
+							}]
+						},
+						{
+							name: 'c2',
+							children: [{
+								name: 'f2'
+							}]
+						},
+						{
+							name: 'd2',
+							children: [{
+								name: 'g2'
+							}]
+						},
+					],
+				}
+			];
+			//深度优先是指从一个未访问的顶点开始依次找到他相邻的第一个邻接点再以他为顶点继续向下，走到底后再回溯换一条路继续向下
+			//递归
+			dfs = (arr) => {
+				let result = [];
+				map = (item) => {
+					result.push(item);
+					item.children && item.children.forEach(item => map(item));
+				}
+				arr.forEach(item => map(item));
+				return result;
+			}
+
+			//不递归，使用栈来将要遍历的节点压栈，出栈时检查此节点是否还有未遍历的节点，有的话压栈，没有就出栈。按先右后左，后进先出的规则
+			dfs2 = (arr) => {
+				let result = [],
+					temp = [...arr],
+					node;
+				while((node = temp.shift())) {
+					result.push(node);
+					if(node.children) {
+						temp.unshift(...node.children);
+					}
+				}
+				return result;
+			}
+
+			//广度优先是从一个顶点出发，先遍历他所有的相邻节点，再依次遍历每个邻节点的相邻节点
+			bfs = (arr) => {
+				let result = [],
+					temp = arr;
+				while(temp.length > 0) {
+					result.push(temp[0]);
+					if(temp[0].children) {
+						temp = temp.concat(temp[0].children);
+					}
+					temp.shift();
+				}
+				return result;
+			}
+
+			console.log(bfs(data));
+		</script>
+	</body>
+
+</html>
