@@ -1,5 +1,7 @@
 # algorithm
 
+初步进阶ts，养成单元自测的好习惯
+
 ## Project setup
 ```
 npm install
@@ -22,3 +24,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
