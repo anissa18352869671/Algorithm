@@ -57,10 +57,10 @@ for (let i = 0; i < 10 * 10000; i++) {
 for (let i = 0; i < 10 * 10000; i++) {
     arr2.push(i);
 }
-console.time('rotate1');
-rotate1(arr1, 9 * 10000);
-console.timeEnd('rotate1');
+// console.time('rotate1');
+// rotate1(arr1, 9 * 10000);
+// console.timeEnd('rotate1');
 
-console.time('rotate2');
-rotate2(arr2, 9 * 10000);
-console.timeEnd('rotate2');
+// console.time('rotate2');
+// rotate2(arr2, 9 * 10000);
+// console.timeEnd('rotate2');

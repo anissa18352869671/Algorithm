@@ -2,7 +2,8 @@
  * @description index
  * @author anissa
  */
-import './array-rotate'
+// import './array-rotate'
+import './match-bracket'
 //  o(1)
 function fn(obj = {}, key = '') {
     return obj[key as keyof typeof obj];
