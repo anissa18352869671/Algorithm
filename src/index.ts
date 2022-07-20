@@ -3,7 +3,8 @@
  * @author anissa
  */
 // import './array-rotate'
-import './match-bracket'
+// import './match-bracket'
+import './two-stack'
 //  o(1)
 function fn(obj = {}, key = '') {
     return obj[key as keyof typeof obj];

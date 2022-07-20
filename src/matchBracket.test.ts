@@ -16,7 +16,7 @@ describe('括号匹配', () => {
         expect(res).toBe(false);
     })
 
-    it('顺序不一致', () => {
+    it('顺序不一致', () => { 
         const str = '{a(b[c)]de}f'
         const res = matchBracket(str)
         expect(res).toBe(false);
