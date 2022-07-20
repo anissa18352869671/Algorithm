@@ -5,7 +5,7 @@
  */
 import { MyQueue } from './two-stack'
 
-describe('', () => {
+describe('两个栈生成一个队列', () => {
     it('add and length', () => {
         const q = new MyQueue();
         expect(q.length).toBe(0);

@@ -4,7 +4,8 @@
  */
 // import './array-rotate'
 // import './match-bracket'
-import './two-stack'
+// import './two-stack'
+import './reverse-link-list'
 //  o(1)
 function fn(obj = {}, key = '') {
     return obj[key as keyof typeof obj];
@@ -27,4 +28,22 @@ function fn3(array = []) {
 }
 console.info("hello")
 
+// const n1 = {
+//     value: 100,
+//     next:n2
+// }
+// const n2 = {
+//     value: 200,
+//     next:n3,
+//     prev:n1
+// }
+// const n3 = {
+//     value: 300,
+//     next:n4,
+//     prev:n2
+// }
+// const n4 = {
+//     value: 400,
+//     prev:n3
+// }
 export default fn;

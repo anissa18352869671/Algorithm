@@ -10,7 +10,7 @@ export class MyQueue {
     add(n: number) {
         this.stack1.push(n)
     }
-    //出队有三布，先push到1，再从1pop到2，再从2出队，剩余的pop到1
+    //出队有三步，先push到1，再从1pop到2，再从2出队，剩余的pop到1
     delete(): number | null {
         let res;
         const stack1 = this.stack1;
